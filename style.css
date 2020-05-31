@@ -1,3 +1,36 @@
-body {
-    background-color: #CBE9E3;
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: black;
+    background-color: #cbe9e3;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin: 40px auto;
+}
+
+section {
+    height: 500px;
 }

@@ -11,34 +11,50 @@
         <meta name="author" content="" />
 
         <link rel="stylesheet" href="style.css" />
+
+        <link rel="stylesheet" href="nav-style.css" />
     </head>
 
     <body>
         <header>
-            <nav>
-                <a href="">LOGO</a>
-                <div>
-                    <a href="">O mnie</a>
-                    <a href="">Nauczanie</a>
-                    <a href="">Współpraca</a>
+            <article id="hero">
+                <video width="100%" height="auto" autoplay id="Test_Video">
+                    <source src="Willkommen.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+            <nav id="nav">
+                <a class="nav-logo" href="#hero"
+                    ><img src="./images/germani_logo.png" alt="germAni-logo"
+                /></a>
+                <div class="nav-list">
+                    <a class="nav-item" href="#about-me">O mnie</a>
+                    <a class="nav-item" href="#teaching">Nauczanie</a>
+                    <a class="nav-item" href="#partnership">Współpraca</a>
                 </div>
             </nav>
         </header>
-        <section class="hero">
-            <video width="1500" height="540" autoplay id="Test_Video">
-                <source src="Willkommen.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </section>
-        <main>
-            <section id="about-me"></section>
-            <section id="teaching"></section>
-            <section id="partnership"></section>
+        <main class="content">
+            <section id="about-me">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                laboriosam hic enim voluptatem distinctio commodi dolores, assumenda
+                consectetur sit similique!
+            </section>
+            <section id="teaching">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quaerat
+                veritatis at, provident placeat voluptas omnis adipisci! Doloremque, fuga
+                fugiat?
+            </section>
+            <section id="partnership">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti iure
+                ipsa ipsum vitae a earum omnis suscipit est ullam nobis!
+            </section>
         </main>
         <footer>
-            tu copyright, mini kontakt i nasze logo, jako tworcow
+            &copy; 2020, mini kontakt i nasze logo, jako tworcow
         </footer>
 
         <script src="script.js"></script>
+        <!-- <script src="nav-script.js"></script> -->
     </body>
 </html>
