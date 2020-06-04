@@ -1,0 +1,12 @@
+.hero {
+    height: 30vh;
+    background: url(./wilkommen-mobile-gif.gif);
+    background-size: cover;
+}
+
+@media (min-width: 480px) {
+    .hero {
+        height: 50vh;
+        background: url(./Willkommen.gif);
+    }
+}
