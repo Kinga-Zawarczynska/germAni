@@ -1,0 +1,42 @@
+nav {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #E7F2F0;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.nav-logo {
+    visibility: hidden;
+    margin: 5% 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+
+    .nav-logo {
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        transition: ease;
+    }
+}
+
+.content {
+    padding: 0;
+}
+
+@media (min-width: $tablet) {
+    nav {
+        flex-direction: row;
+    }
+}

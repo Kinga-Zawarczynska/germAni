@@ -1,0 +1,16 @@
+#hero {
+    height: 30vh;
+    background: url(../videos/wilkommen-mobile-gif.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+        height: 40vh;
+    }
+    @media (min-width: $desktop) {
+        height: 80vh;
+        background: url(../videos/Willkommen2.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
