@@ -1,6 +1,6 @@
 #hero {
     height: 30vh;
-    background: url(../videos/wilkommen-mobile-gif.gif);
+    background: url(../videos/GermniHeroMobile.gif);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -9,7 +9,7 @@
     }
     @media (min-width: $desktop) {
         height: 80vh;
-        background: url(../videos/Willkommen2.gif);
+        background: url(../videos/GermniHeroDesktop.gif);
         background-repeat: no-repeat;
         background-size: cover;
     }
