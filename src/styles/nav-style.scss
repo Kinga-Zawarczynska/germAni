@@ -3,14 +3,24 @@ nav {
     box-sizing: border-box;
     flex-direction: column;
     overflow: hidden;
-    background-color: #E7F2F0;
+    background-color: #e7f2f0;
     width: 100%;
     scroll-behavior: smooth;
 }
 
 .nav-logo {
+    height: 20vh;
+    width: auto;
     visibility: hidden;
     margin: 5% 0;
+    display: flex;
+    justify-content: center;
+    transition: visibi 0.5s ease-in-out;
+
+    img {
+        height: auto;
+        width: auto;
+    }
 }
 
 .nav-list {
@@ -25,9 +35,6 @@ nav {
 
     .nav-logo {
         visibility: visible;
-        display: flex;
-        justify-content: center;
-        transition: ease;
     }
 }
 
