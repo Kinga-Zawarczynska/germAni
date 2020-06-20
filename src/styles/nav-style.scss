@@ -4,21 +4,19 @@ nav {
     flex-direction: column;
     overflow: hidden;
     background-color: #e7f2f0;
-    width: 100%;
+    width: 100vw;
     scroll-behavior: smooth;
 }
 
 .nav-logo {
-    height: 20vh;
-    width: auto;
     visibility: hidden;
-    margin: 5% 0;
+    margin: 3vh 0;
     display: flex;
     justify-content: center;
     transition: visibi 0.5s ease-in-out;
 
     img {
-        height: auto;
+        max-height: 10vh;
         width: auto;
     }
 }
@@ -27,6 +25,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .sticky {
@@ -45,5 +44,27 @@ nav {
 @media (min-width: $tablet) {
     nav {
         flex-direction: row;
+    }
+
+    .nav-list {
+        margin-right: 5vw;
+        align-items: right;
+        justify-content: flex-end;
+
+        .nav-item {
+            padding: 2vw;
+        }
+    }
+
+    .nav-logo {
+        img {
+            height: 8vh;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    nav {
+        width: 60%;
     }
 }
