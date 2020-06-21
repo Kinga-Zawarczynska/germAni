@@ -1,3 +1,5 @@
-export const run = (stickyNavabar) => {
-    window.onscroll = () => stickyNavabar.handleStickyNavbar();
+export const run = (stickyNavabar, asidePic) => {
+    window.onscroll = () => {
+        stickyNavabar.handleStickyNavbar(), asidePic.handleChangeAsidePic();
+    };
 };

@@ -1,12 +1,21 @@
-.content {
+content {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: flex-end;
+
+    &__articles {
+        width: 60rem;
+        margin: 5rem 2rem 5rem 5rem;
+    }
 }
 
 .content-aside-pic {
-    background: url('../images/IMG_20200609_171027.jpg') no-repeat;
-    min-width: 30%;
-    height: 85vh;
-    border: 1rem solid green;
+    background: url('../images/testPic.jpg') no-repeat;
+    width: 40vw;
+    min-width: 35rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -100;
 }
