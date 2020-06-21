@@ -9,22 +9,21 @@ nav {
 }
 
 .nav-logo {
-    visibility: hidden;
-    margin: 0.5% 0;
+    display: none;
+    justify-content: center;
 
     &__img {
-        width: 15rem;
+        margin-top: 3vh;
+        max-height: 7vh;
+        width: auto;
     }
 }
-
 
 .nav-list {
     display: flex;
     align-items: center;
-
-    &__item {
-        margin: 0 2rem 1.5rem;
-    }
+    justify-content: space-around;
+    min-height: 10vh;
 }
 
 .sticky {
@@ -36,7 +35,7 @@ nav {
     }
 
     .nav-logo {
-        visibility: visible;
+        display: flex;
     }
 }
 
@@ -50,9 +49,7 @@ nav {
     }
 
     .nav-list {
-        margin-right: 5vw;
-        align-items: right;
-        justify-content: flex-end;
+        width: 100%;
 
         .nav-item {
             padding: 2vw;
@@ -60,7 +57,7 @@ nav {
     }
 
     .nav-logo {
-        img {
+        &__img {
             height: 8vh;
         }
     }
@@ -68,6 +65,6 @@ nav {
 
 @media (min-width: $desktop) {
     nav {
-        width: 60%;
+        width: 60rem;
     }
 }
