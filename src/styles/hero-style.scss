@@ -8,8 +8,8 @@
         height: 40vh;
     }
     @media (min-width: $desktop) {
-        height: 80vh;
-        background: url(../videos/GermniHeroDesktop.gif);
+        min-height: 70vh;
+        background: url(../videos/kopia.gif);
         background-repeat: no-repeat;
         background-size: cover;
     }

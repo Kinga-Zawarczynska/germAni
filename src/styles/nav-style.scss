@@ -2,35 +2,38 @@ nav {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    background-color: white;
     overflow: hidden;
-    background-color: #e7f2f0;
-    width: 100vw;
+    width: 100%;
     scroll-behavior: smooth;
 }
 
 .nav-logo {
     visibility: hidden;
-    margin: 3vh 0;
-    display: flex;
-    justify-content: center;
-    transition: visibi 0.5s ease-in-out;
+    margin: 0.5% 0;
 
-    img {
-        max-height: 10vh;
-        width: auto;
+    &__img {
+        width: 15rem;
     }
 }
 
+
 .nav-list {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 100%;
+
+    &__item {
+        margin: 0 2rem 1.5rem;
+    }
 }
 
 .sticky {
     position: fixed;
     top: 0;
+
+    .nav {
+        background-color: green;
+    }
 
     .nav-logo {
         visibility: visible;
