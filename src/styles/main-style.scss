@@ -1,0 +1,21 @@
+content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    &__articles {
+        width: 60rem;
+        margin: 5rem 2rem 5rem 5rem;
+    }
+}
+
+.content-aside-pic {
+    background: url('../images/testPic.jpg') no-repeat;
+    width: 40vw;
+    min-width: 35rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -100;
+}

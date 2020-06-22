@@ -1,9 +1,9 @@
 @import './const.scss';
-@import './nav-style.scss';
 
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -18,7 +18,7 @@ html {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: black;
-    background-color: #cbe9e3;
+    background-color:rgb(255, 255, 255);
 }
 
 ul {
@@ -34,6 +34,10 @@ main {
     margin: 40px auto;
 }
 
-section {
-    height: 500px;
+article {
+    height: 1200px;
 }
+
+@import './hero-style.scss';
+@import './nav-style.scss';
+@import './main-style.scss';

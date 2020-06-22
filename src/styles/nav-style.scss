@@ -2,24 +2,29 @@ nav {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    background-color: white;
     overflow: hidden;
-    background-color: #cbe9e3;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 .nav-logo {
-    width: 50%;
+    display: none;
+    visibility: hidden;
+    justify-content: center;
+
+    &__img {
+        margin-top: 3vh;
+        max-height: 7vh;
+        width: auto;
+    }
 }
 
 .nav-list {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
+    justify-content: space-around;
+    min-height: 10vh;
 }
 
 .content {
@@ -29,5 +34,37 @@ nav {
 @media (min-width: $tablet) {
     nav {
         flex-direction: row;
+    }
+
+    .nav-list {
+        width: 100%;
+
+        .nav-item {
+            padding: 2vw;
+        }
+    }
+
+    .nav-logo {
+        display: flex;
+
+        &__img {
+            height: 8vh;
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    nav {
+        width: 60rem;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+
+    .nav-logo {
+        display: flex;
+        visibility: visible;
     }
 }
