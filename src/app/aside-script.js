@@ -7,13 +7,13 @@ export class ChangeAsidePic {
         this.handleChangeAsidePic;
     }
     handleChangeAsidePic() {
-        if (window.pageYOffset >= this.teaching.offsetTop) {
+        if (window.pageYOffset >= (this.teaching.offsetTop - 130)) {
             this.asidePicture.classList.add('teaching');
         } else {
             this.asidePicture.classList.remove('teaching');
         }
         
-        if (window.pageYOffset >= this.partnership.offsetTop) {
+        if (window.pageYOffset >= (this.partnership.offsetTop -130)) {
             this.asidePicture.classList.add('partnership');
         } else {
             this.asidePicture.classList.remove('partnership');

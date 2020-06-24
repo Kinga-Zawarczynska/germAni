@@ -6,6 +6,11 @@ nav {
     overflow: hidden;
     width: 100%;
     scroll-behavior: smooth;
+    box-shadow: 0px 6px 15px -4px black;
+
+    @media (min-width: $tablet) {
+        box-shadow: -5px 6px 15px -4px black;
+    }
 }
 
 .nav-logo {
