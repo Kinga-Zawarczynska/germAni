@@ -10,12 +10,20 @@ content {
 }
 
 .content-aside-pic {
-    background: url('../images/testPic.jpg') no-repeat;
+    background: url('../images/aside-about-me.png');
     width: 40vw;
-    min-width: 35rem;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
     z-index: -100;
+}
+
+
+.teaching {
+    background: url('../images/aside-teaching.png');
+}
+
+.partnership {
+    background: url('../images/aside-partnership.png');
 }

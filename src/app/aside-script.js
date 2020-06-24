@@ -14,9 +14,9 @@ export class ChangeAsidePic {
         }
         
         if (window.pageYOffset >= this.partnership.offsetTop) {
-            this.asidePicture.classList.add('parntership');
+            this.asidePicture.classList.add('partnership');
         } else {
-            this.asidePicture.classList.remove('parntership');
+            this.asidePicture.classList.remove('partnership');
         }
     }
 }
