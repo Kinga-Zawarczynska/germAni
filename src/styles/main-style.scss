@@ -15,7 +15,7 @@
     }
 
     &__single-article {
-        background: rgba(255,255,255,0.8);
+        background: rgba(255, 255, 255, 0.8);
         padding: 2rem;
         margin-top: 3rem;
     }
@@ -24,21 +24,17 @@
 .content-aside-pic {
     height: 100vh;
     background: url('../images/aside-about-me-mobile.png') no-repeat;
-    width: 22rem;
+    width: 40%;
     position: fixed;
     top: 0;
     right: 0;
     z-index: -100;
-    margin-top: 6rem;
 
     @media (min-width: $desktop) {
-        width: 36rem;
         background: url('../images/aside-about-me.png');
         margin-top: 0;
     }
 }
-
-
 
 .teaching {
     background: url('../images/aside-teaching.png');

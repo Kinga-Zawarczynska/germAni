@@ -62,18 +62,28 @@ nav {
 
 @media (min-width: $desktop) {
     nav {
-        width: 60rem;
+        width: 60%;
     }
 }
 
 .sticky {
     position: fixed;
+    opacity: 0;
     top: 0;
+    margin-top: -8vh;
+    animation: 0.6s slidefade 0.2s forwards;
 
     .nav-logo {
         display: flex;
         visibility: visible;
         z-index: 100;
         background-image: none;
+    }
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 0;
     }
 }
