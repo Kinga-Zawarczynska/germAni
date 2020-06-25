@@ -15,13 +15,15 @@ nav {
 
 .nav-logo {
     display: none;
-    visibility: hidden;
+    background: url('../videos/nav-image.gif') no-repeat;
     justify-content: center;
+    width: 30rem;
 
     &__img {
-        margin-top: 3vh;
+        margin: 1vh 0;
         max-height: 7vh;
         width: auto;
+        z-index: -10;
     }
 }
 
@@ -71,5 +73,7 @@ nav {
     .nav-logo {
         display: flex;
         visibility: visible;
+        z-index: 100;
+        background-image: none;
     }
 }
