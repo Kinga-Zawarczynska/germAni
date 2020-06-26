@@ -6,16 +6,24 @@ nav {
     overflow: hidden;
     width: 100%;
     scroll-behavior: smooth;
+    box-shadow: 0px 6px 15px -4px black;
+
+    @media (min-width: $tablet) {
+        box-shadow: -5px 6px 15px -4px black;
+    }
 }
 
 .nav-logo {
     display: none;
+    background: url('../videos/nav-image.gif') no-repeat;
     justify-content: center;
+    width: 30rem;
 
     &__img {
-        margin-top: 3vh;
+        margin: 1vh 0;
         max-height: 7vh;
         width: auto;
+        z-index: -10;
     }
 }
 
@@ -23,20 +31,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 10vh;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-
-    .nav {
-        background-color: green;
-    }
-
-    .nav-logo {
-        display: flex;
-    }
+    height: 10vh;
 }
 
 .content {
@@ -44,7 +39,7 @@ nav {
 }
 
 @media (min-width: $tablet) {
-    nav {
+    .nav {
         flex-direction: row;
     }
 
@@ -57,6 +52,8 @@ nav {
     }
 
     .nav-logo {
+        display: flex;
+
         &__img {
             height: 8vh;
         }
@@ -65,6 +62,44 @@ nav {
 
 @media (min-width: $desktop) {
     nav {
-        width: 60rem;
+        width: 60%;
+        height: 10vh;
+    }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+    nav {
+        font-size: 24px;
+        height: 6.5vh;
+    }
+    .nav-list {
+        height: 6.5vh;
+    }
+    .sticky {
+        flex-direction: column;
+        height: 15vh;
+    }
+}
+
+.sticky {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    margin-top: -8vh;
+    animation: 0.6s slidefade 0.2s forwards;
+
+    .nav-logo {
+        display: flex;
+        visibility: visible;
+        z-index: 100;
+        background-image: none;
+        width: 100%;
+    }
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 0;
     }
 }
