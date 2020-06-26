@@ -5,11 +5,16 @@
 
     &__articles {
         width: 15rem;
+        display: flex;
+        flex-direction: column;
         margin: 0 auto;
-        text-align: center;
 
+        @media (min-width: $tablet) {
+            width: 70rem;
+            margin: 5rem;
+        }
         @media (min-width: $desktop) {
-            width: 55rem;
+            width: 50rem;
             margin: 5rem 2rem 5rem 5rem;
         }
     }
@@ -18,28 +23,58 @@
         background: rgba(255, 255, 255, 0.8);
         padding: 2rem;
         margin-top: 3rem;
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            font-size: 24px;
+        }
+    }
+
+    &__opinions {
+        background: white;
+        height: 30vh;
+        width: 100vw;
+        margin: -10rem 0 0 -4.2rem;
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            width: 60vw;
+        }
+    }
+}
+
+#about-me,
+#teaching,
+#partnership {
+    @media (min-width: $desktop) {
+        padding-top: 5rem;
     }
 }
 
 .content-aside-pic {
-    height: 100vh;
-    background: url('../images/aside-about-me-mobile.png') no-repeat;
-    width: 40%;
+    height: 100%;
+    background: rgb(3, 103, 121);
+    background: linear-gradient(215deg, rgba(3, 103, 121, 1) 61%, rgba(25, 121, 95, 1) 100%);
+    background-repeat: no-repeat;
+    width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     z-index: -100;
 
     @media (min-width: $desktop) {
-        background: url('../images/aside-about-me.png');
+        background: url('../images/aside-about-me.png') no-repeat;
+        width: 40%;
         margin-top: 0;
     }
 }
 
 .teaching {
-    background: url('../images/aside-teaching.png');
+    @media (min-width: $desktop) {
+        background: url('../images/aside-teaching.png') no-repeat;
+    }
 }
 
 .partnership {
-    background: url('../images/aside-partnership.png');
+    @media (min-width: $desktop) {
+        background: url('../images/aside-partnership.png') no-repeat;
+    }
 }

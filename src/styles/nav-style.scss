@@ -31,7 +31,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 10vh;
+    height: 10vh;
 }
 
 .content {
@@ -39,7 +39,7 @@ nav {
 }
 
 @media (min-width: $tablet) {
-    nav {
+    .nav {
         flex-direction: row;
     }
 
@@ -63,6 +63,21 @@ nav {
 @media (min-width: $desktop) {
     nav {
         width: 60%;
+        height: 10vh;
+    }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+    nav {
+        font-size: 24px;
+        height: 6.5vh;
+    }
+    .nav-list {
+        height: 6.5vh;
+    }
+    .sticky {
+        flex-direction: column;
+        height: 15vh;
     }
 }
 
@@ -78,6 +93,7 @@ nav {
         visibility: visible;
         z-index: 100;
         background-image: none;
+        width: 100%;
     }
 }
 
