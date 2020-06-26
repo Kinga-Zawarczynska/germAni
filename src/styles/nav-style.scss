@@ -15,13 +15,15 @@ nav {
 
 .nav-logo {
     display: none;
-    visibility: hidden;
+    background: url('../videos/nav-image.gif') no-repeat;
     justify-content: center;
+    width: 30rem;
 
     &__img {
-        margin-top: 3vh;
+        margin: 1vh 0;
         max-height: 7vh;
         width: auto;
+        z-index: -10;
     }
 }
 
@@ -29,7 +31,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 10vh;
+    height: 10vh;
 }
 
 .content {
@@ -37,7 +39,7 @@ nav {
 }
 
 @media (min-width: $tablet) {
-    nav {
+    .nav {
         flex-direction: row;
     }
 
@@ -60,16 +62,44 @@ nav {
 
 @media (min-width: $desktop) {
     nav {
-        width: 60rem;
+        width: 60%;
+        height: 10vh;
+    }
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+    nav {
+        font-size: 24px;
+        height: 6.5vh;
+    }
+    .nav-list {
+        height: 6.5vh;
+    }
+    .sticky {
+        flex-direction: column;
+        height: 15vh;
     }
 }
 
 .sticky {
     position: fixed;
+    opacity: 0;
     top: 0;
+    margin-top: -8vh;
+    animation: 0.6s slidefade 0.2s forwards;
 
     .nav-logo {
         display: flex;
         visibility: visible;
+        z-index: 100;
+        background-image: none;
+        width: 100%;
+    }
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 0;
     }
 }
