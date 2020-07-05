@@ -2,6 +2,7 @@ nav {
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    align-items: center;
     background-color: white;
     overflow: hidden;
     width: 100%;
@@ -32,6 +33,14 @@ nav {
     align-items: center;
     justify-content: space-around;
     height: 10vh;
+
+    &__item {
+        padding: 2vw;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+    
 }
 
 .content {
@@ -41,6 +50,7 @@ nav {
 @media (min-width: $tablet) {
     .nav {
         flex-direction: row;
+        height: 100px;
     }
 
     .nav-list {
@@ -53,19 +63,19 @@ nav {
 
     .nav-logo {
         display: flex;
-
-        &__img {
-            height: 8vh;
-        }
     }
 }
 
 @media (min-width: $desktop) {
     nav {
         width: 60%;
+    }
+    .nav {
         height: 10vh;
     }
 }
+
+
 
 @media (min-width: $tablet) and (max-width: $desktop) {
     nav {
@@ -73,7 +83,7 @@ nav {
         height: 6.5vh;
     }
     .nav-list {
-        height: 6.5vh;
+        height: 8vh;
     }
     .sticky {
         flex-direction: column;
