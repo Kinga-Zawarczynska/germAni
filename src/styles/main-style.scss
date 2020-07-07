@@ -4,7 +4,7 @@
     justify-content: flex-end;
 
     &__articles {
-        width: 15rem;
+        width: 18rem;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
@@ -21,8 +21,10 @@
 
     &__single-article {
         background: rgba(255, 255, 255, 0.8);
-        padding: 2rem;
+        padding: 1rem;
         margin-top: 3rem;
+        text-align: center;
+
 
         @media (min-width: $tablet) and (max-width: $desktop) {
             font-size: 24px;
