@@ -1,5 +1,10 @@
 @import './const.scss';
 
+@font-face {
+    font-family: 'josefin';
+    src: '../fonts/Courier Prime.ttf';
+  }
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -15,7 +20,7 @@
 }
 
 html {
-    font-family: 'Lato', sans-serif;
+    font-family: 'josefin', sans-serif;
     font-size: 16px;
     color: black;
     background-color:rgb(255, 255, 255);
@@ -32,10 +37,6 @@ a {
 
 main {
     margin: 40px auto;
-}
-
-article {
-    height: 1200px;
 }
 
 #partnershop {

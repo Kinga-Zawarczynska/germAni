@@ -4,23 +4,19 @@
     justify-content: flex-end;
 
     &__articles {
-        width: 18rem;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
 
-        @media (min-width: $tablet) {
-            width: 70rem;
-            margin: 5rem;
-        }
         @media (min-width: $desktop) {
-            width: 50rem;
-            margin: 5rem 2rem 5rem 5rem;
+            width: 60vw;
+            margin: 0;
         }
     }
 
     &__single-article {
-        background: rgba(255, 255, 255, 0.8);
+        background: rgb(249, 250, 192);
         padding: 1rem;
         margin-top: 3rem;
         text-align: center;
@@ -34,18 +30,40 @@
     &__opinions {
         background: white;
         height: 30vh;
-        width: 100vw;
-        margin: -10rem 0 0 -4.2rem;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-        @media (min-width: $tablet) and (max-width: $desktop) {
-            width: 60vw;
+    &__trusted-us {
+        text-align: center;
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: bold;
+
+        img {
+            height: 30vh;
+            @media (min-width: $desktop) {
+                height: 50vh;
+            }
+
         }
     }
+}
+
+.icon-image {
+    height: 20vh;
+    width: auto;
+    margin: 5% 0;
 }
 
 #about-me,
 #teaching,
 #partnership {
+    margin: 0 5vw; 
+    display: flex;
+    flex-direction: column;
     @media (min-width: $desktop) {
         padding-top: 5rem;
     }
