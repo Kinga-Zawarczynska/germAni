@@ -16,7 +16,7 @@
     }
 
     &__single-article {
-        background: rgb(249, 250, 192);
+        background: white;
         padding: 1rem;
         margin-top: 3rem;
         text-align: center;
@@ -68,6 +68,9 @@
         padding-top: 5rem;
     }
 }
+#partnership {
+height: 1200px;
+}
 
 .content-aside-pic {
     height: 100%;
@@ -81,7 +84,7 @@ background: linear-gradient(215deg, rgba(255,87,87,1) 58%, rgba(247,240,169,1) 8
     z-index: -100;
 
     @media (min-width: $desktop) {
-        background: url('../images/aside-about-me.png') no-repeat;
+        background: url('../images/aside-a.svg') no-repeat;
         width: 40%;
         margin-top: 0;
     }
@@ -89,12 +92,12 @@ background: linear-gradient(215deg, rgba(255,87,87,1) 58%, rgba(247,240,169,1) 8
 
 .teaching {
     @media (min-width: $desktop) {
-        background: url('../images/aside-teaching.png') no-repeat;
+        background: url('../images/aside-t.svg') no-repeat;
     }
 }
 
 .partnership {
     @media (min-width: $desktop) {
-        background: url('../images/aside-partnership.png') no-repeat;
+        background: url('../images/aside-p.svg') no-repeat;
     }
 }

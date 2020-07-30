@@ -16,9 +16,10 @@ nav {
 
 .nav-logo {
     display: none;
-    background: url('../videos/nav-image.gif') no-repeat;
+    background: url('../videos/arrows.gif') no-repeat;
     justify-content: center;
-    width: 30rem;
+    width: 20rem;
+    margin-left: 2rem;
 
     &__img {
         margin: 1vh 0;
