@@ -1,10 +1,5 @@
 @import './const.scss';
 
-@font-face {
-    font-family: 'josefin';
-    src: '../fonts/Courier Prime.ttf';
-  }
-
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -20,10 +15,10 @@
 }
 
 html {
-    font-family: 'josefin', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     color: black;
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 ul {
@@ -37,10 +32,6 @@ a {
 
 main {
     margin: 40px auto;
-}
-
-#partnershop {
-    height: 1900px;
 }
 
 @import './hero-style.scss';
