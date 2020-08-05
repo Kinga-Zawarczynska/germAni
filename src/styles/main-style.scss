@@ -16,13 +16,12 @@
     }
 
     &__single-article {
-        background: white;
-        padding: 1rem;
-        margin-top: 3rem;
+        margin-top: 3rem 0 0;
         text-align: center;
 
-        @media (min-width: $tablet) and (max-width: $desktop) {
-            font-size: 24px;
+        @media (min-width: $tablet) {
+            font-size: 16px;
+            padding: 3rem;
         }
     }
 
@@ -52,7 +51,7 @@
 }
 
 .icon-image {
-    height: 20vh;
+    height: 22vh;
     width: auto;
     margin: 5% 0;
 }
@@ -60,8 +59,8 @@
 .flashcard {
     font-size: 1rem;
     background-color: transparent;
-    height: 20vh;
-    width: 20vh;
+    height: 25vh;
+    width: 25vh;
     margin: 5% auto;
     justify-self: center;
 }
@@ -101,11 +100,9 @@
     justify-content: center;
 }
 
-.flashcard-front {
-    .flashcard-image {
-        height: 100%;
-        width: auto;
-    }
+.flashcard-image {
+    height: 100%;
+    width: auto;
 }
 
 .flashcard-back {
@@ -117,7 +114,7 @@
 }
 
 .with-us-image {
-    height: 10vh;
+    height: 8vh;
     width: auto;
     display: block;
     margin: 0 auto;
@@ -158,17 +155,16 @@
 }
 
 #partnership {
-    height: 1200px;
+    height: 1900px;
+    padding-top: 10vh;
 }
 
 .content-aside-pic {
     height: 100%;
     background: rgb(255, 87, 87);
-    background: linear-gradient(
-        215deg,
-        rgba(255, 87, 87, 1) 58%,
-        rgba(247, 240, 169, 1) 89%
-    );
+    background: linear-gradient(215deg,
+            rgba(255, 87, 87, 1) 58%,
+            rgba(247, 240, 169, 1) 89%);
     background-repeat: no-repeat;
     width: 100%;
     position: fixed;
@@ -177,7 +173,8 @@
     z-index: -100;
 
     @media (min-width: $desktop) {
-        background: url('../images/aside-a.svg') no-repeat;
+        background: url('../images/aside-a.png') no-repeat;
+        background-size: cover;
         width: 40%;
         margin-top: 0;
     }
@@ -185,12 +182,14 @@
 
 .teaching {
     @media (min-width: $desktop) {
-        background: url('../images/aside-t.svg') no-repeat;
+        background: url('../images/aside-t.png') no-repeat;
+        background-size: cover;
     }
 }
 
 .partnership {
     @media (min-width: $desktop) {
-        background: url('../images/aside-p.svg') no-repeat;
+        background: url('../images/aside-p.png') no-repeat;
+        background-size: cover;
     }
 }
