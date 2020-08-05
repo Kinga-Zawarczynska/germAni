@@ -4,39 +4,140 @@
     justify-content: flex-end;
 
     &__articles {
-        width: 15rem;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
 
-        @media (min-width: $tablet) {
-            width: 70rem;
-            margin: 5rem;
-        }
         @media (min-width: $desktop) {
-            width: 50rem;
-            margin: 5rem 2rem 5rem 5rem;
+            width: 60vw;
+            margin: 0;
         }
     }
 
     &__single-article {
-        background: rgba(255, 255, 255, 0.8);
-        padding: 2rem;
-        margin-top: 3rem;
+        margin-top: 3rem 0 0;
+        text-align: center;
 
-        @media (min-width: $tablet) and (max-width: $desktop) {
-            font-size: 24px;
+        @media (min-width: $tablet) {
+            font-size: 16px;
+            padding: 3rem;
         }
     }
 
     &__opinions {
         background: white;
         height: 30vh;
-        width: 100vw;
-        margin: -10rem 0 0 -4.2rem;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-        @media (min-width: $tablet) and (max-width: $desktop) {
-            width: 60vw;
+    &__trusted-us {
+        text-align: center;
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: bold;
+
+        img {
+            height: 30vh;
+
+            @media (min-width: $desktop) {
+                height: 50vh;
+            }
+        }
+    }
+}
+
+.icon-image {
+    height: 22vh;
+    width: auto;
+    margin: 5% 0;
+}
+
+.flashcard {
+    font-size: 1rem;
+    background-color: transparent;
+    height: 25vh;
+    width: 25vh;
+    margin: 5% auto;
+    justify-self: center;
+}
+
+.flashcard:hover {
+    .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front {
+        opacity: 0;
+    }
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flashcard-front,
+.flashcard-back {
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: opacity 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flashcard-image {
+    height: 100%;
+    width: auto;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+
+    p {
+        font-weight: 700;
+    }
+}
+
+.with-us-image {
+    height: 8vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.offer-list {
+    margin: 5% 15% 0;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+
+    ul {
+        list-style: none;
+
+        p {
+            text-indent: -1.15em;
+            margin-bottom: 0.75em;
+        }
+
+        p::before {
+            color: rgb(240, 82, 61);
+            content: '◊ ';
+            padding-right: 5px;
         }
     }
 }
@@ -44,15 +145,26 @@
 #about-me,
 #teaching,
 #partnership {
+    margin: 0 5vw;
+    display: flex;
+    flex-direction: column;
+
     @media (min-width: $desktop) {
-        padding-top: 5rem;
+        padding-top: 3vh;
     }
+}
+
+#partnership {
+    height: 1900px;
+    padding-top: 10vh;
 }
 
 .content-aside-pic {
     height: 100%;
-    background: rgb(255,87,87);
-background: linear-gradient(215deg, rgba(255,87,87,1) 58%, rgba(247,240,169,1) 89%);
+    background: rgb(255, 87, 87);
+    background: linear-gradient(215deg,
+            rgba(255, 87, 87, 1) 58%,
+            rgba(247, 240, 169, 1) 89%);
     background-repeat: no-repeat;
     width: 100%;
     position: fixed;
@@ -61,7 +173,8 @@ background: linear-gradient(215deg, rgba(255,87,87,1) 58%, rgba(247,240,169,1) 8
     z-index: -100;
 
     @media (min-width: $desktop) {
-        background: url('../images/aside-about-me.png') no-repeat;
+        background: url('../images/aside-a.png') no-repeat;
+        background-size: cover;
         width: 40%;
         margin-top: 0;
     }
@@ -69,12 +182,14 @@ background: linear-gradient(215deg, rgba(255,87,87,1) 58%, rgba(247,240,169,1) 8
 
 .teaching {
     @media (min-width: $desktop) {
-        background: url('../images/aside-teaching.png') no-repeat;
+        background: url('../images/aside-t.png') no-repeat;
+        background-size: cover;
     }
 }
 
 .partnership {
     @media (min-width: $desktop) {
-        background: url('../images/aside-partnership.png') no-repeat;
+        background: url('../images/aside-p.png') no-repeat;
+        background-size: cover;
     }
 }
