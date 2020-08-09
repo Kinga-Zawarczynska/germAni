@@ -11,6 +11,48 @@
     <meta name="author" content="" />
     <link rel="icon" type="image/png" href="black-favicon.png" data-dark="white-favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Shadows+Into+Light+Two&display=swap"
+        rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_axTwAGKYLAAHFUnWxNlP4");
+        })();
+    </script>
+    <script>
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                if (this.checkbox.checked) {
+                    this.emailSubject.setAttribute('value', 'Chcę pracować w GermAni!')
+                } else {
+                    this.emailSubject.setAttribute('value', 'Chcę uczyć się z GermAni!')
+                }
+
+                if (this.emailSubject !== '') {
+                    emailjs.sendForm('gmail_germani', 'template_KPMggXkq', this)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        document.getElementById('message-sent').setAttribute('class', 'message-sent__shown')
+                        setTimeout(() => {
+                            document.getElementById('message-sent').setAttribute('class', 'message-sent__hidden')
+                        }, 3000);
+                        
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                        
+                    })
+                    .then(() => {
+                        document.getElementById('contact-form').reset();
+                        event.preventDefault();
+                    });
+                } 
+            });
+            document.getElementById('contact-form').reset();
+        }
+    </script>
 </head>
 
 <body>
@@ -24,6 +66,7 @@
                 <a class="nav-list__item" href="#about-me">O mnie</a>
                 <a class="nav-list__item" href="#teaching">Nauczanie</a>
                 <a class="nav-list__item" href="#partnership">Współpraca</a>
+                <a class="nav-list__item" href="#contact">Kontakt</a>
             </div>
         </nav>
     </header>
@@ -32,6 +75,7 @@
         <aside class="content-aside-pic"></aside>
         <section class="content__articles">
             <article id="about-me">
+                <img alt="poznajmy się" src="./images/poznajmysie.png" class="meet-me" />
                 <p class="content__single-article">
                     Cześć, jestem Ania i chcę podzielić się z Tobą moją wizją
                     germanistyki. Nauka niemieckiego przypomina mi oswajanie kota. Na
@@ -168,18 +212,25 @@
                 <p class="content__single-article">
                     Poszukujemy otwartych i pozytywnie nastawionych lektorów,
                     posiadających indywidualne podejście i dobry kontakt z uczniami.
-                    Wymagamy doświadczenia w nauczaniu, preferowany dyplom filologii
-                    germańskiej, ale nawiążemy współpracę również ze studentami
-                    ostatnich lat germanistyki/lingwistyki. Dodatkową zaletą będzie
-                    doświadczenie w nauczaniu online. Mile widziane: status studenta i
-                    wiek poniżej 26 lat, lub własna działalność gospodarcza. Oferujemy
-                    elastyczne godziny pracy na umowie zlecenie i 40 złotych netto za
-                    60 min. zajęć. Zainteresowane osoby prosimy o kontakt na facebooku
-                    lub mailowo. W wiadomości do nas proszę zawrzeć numer telefonu,
-                    krótki opis doświadczenia i dyspozycyjność, a mianowicie w jakich
-                    porach i mniej więcej ile godzin w tygodniu mógłbyś/ -abyś
-                    pracować. Oddzwonimy do wybranych kandydatów.
                 </p>
+                <img src="./images/wanted.svg" class="wanted-img" />
+            </article>
+            <article id="contact">
+                <form id="contact-form" class="form">
+                    <label>Twoje imię</label>
+                    <input type="text" name="from_name">
+                    <label>Twój e-mail</label>
+                    <input type="email" name="from_email">
+                    <label>Chcę pracować w <strong>GermAni</strong></label>
+                    <input type="checkbox" name="checkbox">
+                    <input type="hidden" name="emailSubject">
+                    <label>Treść</label>
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Wyślij">
+                </form>
+                <div id="message-sent" class="message-sent__hidden">
+                    <p>WYSŁANO WIADOMOŚĆ</p>
+                </div>
             </article>
         </section>
     </main>

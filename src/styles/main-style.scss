@@ -20,7 +20,7 @@
         text-align: center;
 
         @media (min-width: $tablet) {
-            font-size: 16px;
+            font-size: 18px;
             padding: 3rem;
         }
     }
@@ -47,6 +47,11 @@
                 height: 50vh;
             }
         }
+    }
+
+    .meet-me {
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
@@ -148,14 +153,9 @@
     margin: 0 5vw;
     display: flex;
     flex-direction: column;
-
-    @media (min-width: $desktop) {
-        padding-top: 3vh;
-    }
 }
 
 #partnership {
-    height: 1900px;
     padding-top: 10vh;
 }
 
@@ -192,4 +192,20 @@
         background: url('../images/aside-p.png') no-repeat;
         background-size: cover;
     }
+}
+
+.wanted-img {
+    height: 70vh;
+    margin-top: 2%;
+    display: block;
+    @media (min-width: $desktop) {
+        height: 85vh;
+    }
+}
+
+.message-sent__hidden {
+    visibility: hidden;
+}
+.message-sent__shown{
+    visibility: visible;
 }
