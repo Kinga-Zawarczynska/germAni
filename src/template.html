@@ -207,7 +207,42 @@
                     Godzina zegarowa zajęć to koszt 80 zł.
                 </div>
             </article>
-            <article class="content__opinions"></article>
+            <article class="content__opinions">
+                <div class="wrapper">
+                    <div class="slideshow-container">
+                      <div class="mySlides fade">
+                        <div class="i-tag"> <i class="fas fa-pepper-hot"> WYBIERZ PRODUKT</i></div>
+            
+                      </div>
+            
+                      <div class="mySlides fade">
+                        <div class="i-tag"><i class="fas fa-balance-scale"> PODAJ ILOŚĆ</i></div>
+            
+                      </div>
+            
+                      <div class="mySlides fade">
+                        <div class="i-tag"><i class="fas fa-book"> WYBIERZ PRZEPIS</i></div>
+            
+                      </div>
+                      <div class="mySlides fade">
+                        <div class="i-tag"><i class="fas fa-star-half-alt">DODAJ DO ULUBIONYCH</i></div>
+            
+                      </div>
+            
+                      <a class="prev">&#10094;</a>
+                      <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                    </div>
+                    <br>
+            
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                      <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+            
+                  </div>
+            </article>
             <article id="partnership">
                 <p class="content__single-article">
                     Poszukujemy otwartych i pozytywnie nastawionych lektorów,
@@ -216,7 +251,7 @@
                 <img src="./images/wanted.svg" class="wanted-img" />
             </article>
             <article id="contact">
-                <form id="contact-form" class="form">
+                <form id="contact-form" class="form" name="contact-form">
                     <label>Twoje imię</label>
                     <input type="text" name="from_name">
                     <label>Twój e-mail</label>
@@ -226,6 +261,8 @@
                     <input type="hidden" name="emailSubject">
                     <label>Treść</label>
                     <textarea name="message"></textarea>
+                    <p class="first-number" id="first-number"></p> + <p class="second-number" id="second-number"></p>
+                    <input type="number" name="sum" required>
                     <input type="submit" value="Wyślij">
                 </form>
                 <div id="message-sent" class="message-sent__hidden">
@@ -239,5 +276,14 @@
         &copy; 2020
     </footer>
 </body>
+<script>
+    // function validateForm() {
+        const firstNumber = document.getElementById("first-number");               
+        const secondNumber = document.getElementById("second-number");
+
+        firstNumber.textContent = Math.ceil(Math.random()*10);
+        secondNumber.textContent = Math.ceil(Math.random()*10);
+    // }
+</script>
 
 </html>
