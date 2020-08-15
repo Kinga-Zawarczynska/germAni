@@ -162,9 +162,11 @@
 .content-aside-pic {
     height: 100%;
     background: rgb(255, 87, 87);
-    background: linear-gradient(215deg,
-            rgba(255, 87, 87, 1) 58%,
-            rgba(247, 240, 169, 1) 89%);
+    background: linear-gradient(
+        215deg,
+        rgba(255, 87, 87, 1) 58%,
+        rgba(247, 240, 169, 1) 89%
+    );
     background-repeat: no-repeat;
     width: 100%;
     position: fixed;
@@ -194,6 +196,10 @@
     }
 }
 
+#contact {
+    min-height: 100vh;
+}
+
 .wanted-img {
     height: 70vh;
     margin-top: 2%;
@@ -206,6 +212,6 @@
 .message-sent__hidden {
     visibility: hidden;
 }
-.message-sent__shown{
+.message-sent__shown {
     visibility: visible;
 }

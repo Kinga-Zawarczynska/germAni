@@ -1,6 +1,6 @@
-export const run = (stickyNavabar, asidePic, favicon) => {
+export const run = (stickyNavabar, scrollClasses, favicon) => {
     window.onscroll = () => {
-        stickyNavabar.handleStickyNavbar(), asidePic.handleChangeAsidePic();
+        stickyNavabar.handleStickyNavbar(), scrollClasses.handleChangeClasses();
     };
     window.addEventListener('DOMContentLoaded', favicon.handleDarkMode());
 };
