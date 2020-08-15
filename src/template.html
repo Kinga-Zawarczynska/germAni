@@ -73,6 +73,10 @@
             document.getElementById('contact-form').reset();
         };
     </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -227,43 +231,29 @@
                     Godzina zegarowa zajęć to koszt 80 zł.
                 </div>
             </article>
-            <article class="content__opinions">
-                <div class="wrapper">
-                    <div class="slideshow-container">
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-pepper-hot"> WYBIERZ PRODUKT</i>
-                            </div>
-                        </div>
+            <article id="opinions">
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
 
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-balance-scale"> PODAJ ILOŚĆ</i>
-                            </div>
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="./images/share.png" alt="opinion-one" />
                         </div>
-
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-book"> WYBIERZ PRZEPIS</i>
-                            </div>
+                        <div class="swiper-slide">
+                            <img src="./images/komfort.png" alt="opinion-two" />
                         </div>
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-star-half-alt">DODAJ DO ULUBIONYCH</i>
-                            </div>
+                        <div class="swiper-slide">
+                            <img src="./images/time.png" alt="opinion-three" />
                         </div>
-
-                        <a class="prev">&#10094;</a>
-                        <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
                     </div>
-                    <br />
 
-                    <div style="text-align: center;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </article>
             <article id="partnership">
