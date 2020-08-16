@@ -1,0 +1,30 @@
+#opinions {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.slick-container {
+    width: 90%;
+    height: 100%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slick-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrow {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}

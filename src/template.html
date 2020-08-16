@@ -21,7 +21,7 @@
         })();
     </script>
     <script>
-        window.onload = function () {
+        const contactForm = () => {
             document
                 .getElementById('contact-form')
                 .addEventListener('submit', function (event) {
@@ -73,13 +73,9 @@
             document.getElementById('contact-form').reset();
         };
     </script>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
-<body>
+<body onload="contactForm()">
     <header>
         <article id="hero"></article>
         <nav id="nav" class="nav">
@@ -232,29 +228,23 @@
                 </div>
             </article>
             <article id="opinions">
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
+                <h2>Opinie</h2>
 
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img src="./images/share.png" alt="opinion-one" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/komfort.png" alt="opinion-two" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/time.png" alt="opinion-three" />
-                        </div>
+                <div class="slick-container">
+                    <div class="slick-slide">
+                        <h3>Opinia</h3>
+                        <p>Bardo fajnie <i>~Stefan</i></p>
                     </div>
-
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="slick-slide">
+                        <h3>Opinia</h3>
+                        <p>Bardo fajnie <i>~Stefan</i></p>
+                    </div>
+                    <div class="slick-slide">
+                        <h3>Opinia</h3>
+                        <p>Bardo fajnie <i>~Stefan</i></p>
+                    </div>
                 </div>
+                
             </article>
             <article id="partnership">
                 <p class="content__single-article">
@@ -290,7 +280,22 @@
     <footer>
         &copy; 2020
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.slick-container').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button type="button" class="arrow previous"><</button>',
+            nextArrow: '<button type="button" class="arrow next">></button>',
+        });
+    </script>
 </body>
+
 <script>
     // function validateForm() {
     const firstNumber = document.getElementById('first-number');
