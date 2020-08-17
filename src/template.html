@@ -148,9 +148,8 @@
                     </div>
 
                     <p>
-                        Zajęcia z nami to komfort nauki gdzie i kiedy zechcesz: w
-                        kawiarni, pociągu, domowym zaciszu, podczas przerwy w pracy,
-                        oraz łatwy i szybki dostęp do spersonalizowanych materiałów.
+                        Zajęcia z nami to komfort nauki, gdzie i kiedy zechcesz - w
+                        kawiarni, pociągu, domowym zaciszu, podczas przerwy w pracy. To także łatwy i szybki dostęp do spersonalizowanych materiałów.
                         Tworząc je nie tylko uwzględniamy Twoje indywidualne potrzeby,
                         ale także korzystamy z wielu źródeł i nowoczesnych narzędzi.
                         Posłuchasz więc z nami niemieckojęzycznych piosenek, obejrzysz
@@ -253,17 +252,22 @@
             <article id="contact">
                 <form id="contact-form" class="form" name="contact-form">
                     <label>Twoje imię</label>
-                    <input type="text" name="from_name">
+                    <input type="text" name="from_name" required class="form__input">
                     <label>Twój e-mail</label>
-                    <input type="email" name="from_email">
-                    <label>Chcę pracować w <strong>GermAni</strong></label>
-                    <input type="checkbox" name="checkbox">
+                    <input type="email" name="from_email" required class="form__input">
+                    <div class="form__checkbox">
+                        <label class=form__checkbox-label>Chcę pracować w <strong>GermAni</strong> -> </label>
+                        <input type="checkbox" name="checkbox">
+                    </div>
+                   
                     <input type="hidden" name="emailSubject">
                     <label>Treść</label>
-                    <textarea name="message"></textarea>
-                    <p class="first-number" id="first-number"></p> + <p class="second-number" id="second-number"></p>
-                    <input type="number" name="sum" required>
-                    <input type="submit" value="Wyślij">
+                    <textarea name="message" class="form__input"></textarea>
+                    <div class="form__captcha">
+                        <p class="first-number" id="first-number"></p> + <p class="second-number" id="second-number"></p> =
+                    <input type="number" name="sum" required class="form__input--captcha">
+                    </div>
+                    <input type="submit" value="Wyślij" class="form__submit">
                 </form>
                 <div id="message-sent" class="message-sent__hidden">
                     <p>WYSŁANO WIADOMOŚĆ</p>
