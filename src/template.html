@@ -21,7 +21,7 @@
         })();
     </script>
     <script>
-        window.onload = function () {
+        const contactForm = () => {
             document
                 .getElementById('contact-form')
                 .addEventListener('submit', function (event) {
@@ -75,7 +75,7 @@
     </script>
 </head>
 
-<body>
+<body onload="contactForm()">
     <header>
         <article id="hero"></article>
         <nav id="nav" class="nav">
@@ -227,44 +227,24 @@
                     Godzina zegarowa zajęć to koszt 80 zł.
                 </div>
             </article>
-            <article class="content__opinions">
-                <div class="wrapper">
-                    <div class="slideshow-container">
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-pepper-hot"> WYBIERZ PRODUKT</i>
-                            </div>
-                        </div>
+            <article id="opinions">
+                <h2>Opinie</h2>
 
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-balance-scale"> PODAJ ILOŚĆ</i>
-                            </div>
-                        </div>
-
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-book"> WYBIERZ PRZEPIS</i>
-                            </div>
-                        </div>
-                        <div class="mySlides fade">
-                            <div class="i-tag">
-                                <i class="fas fa-star-half-alt">DODAJ DO ULUBIONYCH</i>
-                            </div>
-                        </div>
-
-                        <a class="prev">&#10094;</a>
-                        <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                <div class="slick-container">
+                    <div class="slick-slide">
+                        <h3>Opinia</h3>
+                        <p>Bardo fajnie <i>~Stefan</i></p>
                     </div>
-                    <br />
-
-                    <div style="text-align: center;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
+                    <div class="slick-slide">
+                        <h3>Opinia</h3>
+                        <p>Bardo fajnie <i>~Stefan</i></p>
+                    </div>
+                    <div class="slick-slide">
+                        <h3>Opinia</h3>
+                        <p>Bardo fajnie <i>~Stefan</i></p>
                     </div>
                 </div>
+                
             </article>
             <article id="partnership">
                 <p class="content__single-article">
@@ -304,7 +284,22 @@
     <footer>
         &copy; 2020
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.slick-container').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            prevArrow: '<button type="button" class="arrow previous"><</button>',
+            nextArrow: '<button type="button" class="arrow next">></button>',
+        });
+    </script>
 </body>
+
 <script>
     const firstNumber = document.getElementById('first-number');
     const secondNumber = document.getElementById('second-number');
