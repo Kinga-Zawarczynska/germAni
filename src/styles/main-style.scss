@@ -224,7 +224,7 @@
 
     &__input {
         width: 65%;
-        height: 20px;
+        height: 30px;
         border: none;
         border-radius: 3px;
         background: rgba(247, 246, 185, 0.986);
@@ -243,6 +243,7 @@
         display: flex;
         margin: 2% 0;
         justify-content: center;
+        outline: none;
     }
 
     &__checkbox {
@@ -254,6 +255,18 @@
             font-size: 14px;
             padding: 4% 0;
             color:rgb(0, 0, 0);
+        }
+    }
+
+    &__submit {
+        background: rgba(243, 231, 177, 0.6);
+        border: black 1px solid;
+        border-radius: 3px;
+        padding: 2%;
+        font-weight: bold;
+
+        @media (min-width: $desktop) {
+            padding: 1% 3%;
         }
     }
 }
