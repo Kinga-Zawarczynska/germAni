@@ -5,11 +5,13 @@ export class ChangeClassesOnScroll {
         this.aboutMe = document.querySelector('#about-me');
         this.teaching = document.querySelector('#teaching');
         this.partnership = document.querySelector('#partnership');
+        this.contact = document.querySelector('#contact');
 
         this.nav = document.querySelector('#nav');
         this.navAbout = document.querySelector('.nav-about');
         this.navTeaching = document.querySelector('.nav-teaching');
         this.navPartnership = document.querySelector('.nav-partnership');
+        this.navContact = document.querySelector('.nav-contact');
 
         this.handleChangeClasses;
     }
@@ -39,6 +41,13 @@ export class ChangeClassesOnScroll {
         } else {
             this.asidePicture.classList.remove('partnership');
             this.navPartnership.classList.remove('nav-item-active');
+        }
+
+        if (window.pageYOffset >= this.contact.offsetTop - navHeight) {
+            this.navContact.classList.add('nav-item-active');
+            this.navPartnership.classList.remove('nav-item-active');
+        } else {
+            this.navContact.classList.remove('nav-item-active');
         }
     }
 }

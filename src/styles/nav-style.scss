@@ -20,7 +20,10 @@ nav {
     background: url('../videos/arrows.gif') no-repeat;
     justify-content: center;
     width: 20rem;
-    margin-left: 2rem;
+    @media (min-width: $desktop) {
+        margin-left: 2rem;
+    }
+   
 
     &__img {
         margin: 1vh 0;
@@ -109,7 +112,6 @@ nav {
         visibility: visible;
         z-index: 100;
         background-image: none;
-        width: 100%;
     }
 }
 
