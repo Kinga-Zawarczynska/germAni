@@ -10,17 +10,15 @@
         margin: 0 auto;
 
         @media (min-width: $desktop) {
-            width: 60vw;
+            width: 60%;
             margin: 0;
         }
     }
 
     &__single-article {
-        margin-top: 3rem 0 0;
         text-align: center;
 
         @media (min-width: $tablet) {
-            font-size: 18px;
             padding: 3rem;
         }
     }
@@ -96,7 +94,7 @@
 #opinions,
 #contact {
     margin: 0 5vw;
-    padding-top: 10vh;
+    padding-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,8 +102,9 @@
 }
 
 .wanted-img {
+    margin: 0 auto;
     height: 70vh;
-    margin-top: 2%;
+    margin-top: 5vh;
     display: block;
 
     @media (min-width: $desktop) {
