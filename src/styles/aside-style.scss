@@ -34,3 +34,10 @@
         background-size: cover;
     }
 }
+
+.contact {
+    @media (min-width: $desktop) {
+        background: url('../images/aside-c.png') no-repeat;
+        background-size: cover;
+    }
+}

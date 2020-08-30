@@ -17,9 +17,11 @@
 
     &__single-article {
         text-align: center;
+        margin-bottom: 2rem;
 
         @media (min-width: $tablet) {
             padding: 3rem;
+            margin: none;
         }
     }
 
@@ -64,12 +66,12 @@
     margin: 5% 0;
 }
 
-.with-us-image {
-    height: 8vh;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
+// .with-us-image {
+//     width: 80%;
+//     height: auto;
+//     display: block;
+//     margin: 0 auto;
+// }
 
 .offer-list {
     margin: 5% 10% 0;
@@ -96,9 +98,13 @@
     }
 
     .price {
-        height: 55vh;
+        height: 35vh;
         width: auto;
         margin: 5% 0;
+
+        @media (min-width: $tablet) {
+            height: 55vh;
+        }
     }
 }
 
@@ -108,11 +114,15 @@
 #opinions,
 #contact {
     margin: 0 5vw;
-    padding-top: 5vh;
+    padding-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: $desktop) {
+        padding-top: 5vh;
+    }
 }
 
 .wanted-img {
@@ -124,4 +134,19 @@
     @media (min-width: $desktop) {
         height: 85vh;
     }
+}
+
+.headers {
+    width: 80%;
+    height: auto;
+    // margin: 1rem 0 2rem;
+}
+
+.big {
+    width: 65%;
+    @media (min-width: $desktop) {
+        width: 50%;
+    }
+   
+    
 }
