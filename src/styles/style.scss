@@ -30,6 +30,15 @@ a {
     color: black;
 }
 
+h2 {
+    font-size: 22px;
+
+    @media (max-width: $tablet) {
+        margin: 3rem 0;
+    }
+   
+}
+
 @import './hero-style.scss';
 @import './nav-style.scss';
 @import './main-style.scss';
