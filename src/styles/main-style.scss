@@ -4,24 +4,24 @@
     justify-content: flex-end;
 
     &__articles {
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
 
         @media (min-width: $desktop) {
-            width: 60vw;
+            width: 60%;
             margin: 0;
         }
     }
 
     &__single-article {
-        margin-top: 3rem 0 0;
         text-align: center;
+        margin-bottom: 2rem;
 
         @media (min-width: $tablet) {
-            font-size: 18px;
             padding: 3rem;
+            margin: none;
         }
     }
 
@@ -33,19 +33,24 @@
     }
 
     &__trusted-us {
-        text-align: center;
-        margin: 3rem 0;
+        margin: 1.5rem 0 0;
         display: flex;
-        flex-direction: column;
-        font-size: 18px;
-        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        background: url('../images/mobile-zaufali-nam.png') no-repeat;
+        height: 40vh;
+        width: 90%;
 
-        img {
-            height: 30vh;
+        @media (max-width: 360px) {
+            width: 105%;
+        }
 
-            @media (min-width: $desktop) {
-                height: 50vh;
-            }
+        @media (min-width: $tablet) {
+            background: url('../images/desktop-zaufali-nam.png') no-repeat;
+            background-size: contain;
+            height: 25vh;
+            width: 100%;
+            margin: 0 auto;
         }
     }
 
@@ -61,18 +66,14 @@
     margin: 5% 0;
 }
 
-.with-us-image {
-    height: 8vh;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
-
 .offer-list {
     margin: 5% 10% 0;
     text-align: left;
     font-weight: bold;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     ul {
         list-style: none;
@@ -88,6 +89,16 @@
             padding-right: 5px;
         }
     }
+
+    .price {
+        height: 35vh;
+        width: auto;
+        margin: 5% 0;
+
+        @media (min-width: $tablet) {
+            height: 55vh;
+        }
+    }
 }
 
 #about-me,
@@ -96,19 +107,38 @@
 #opinions,
 #contact {
     margin: 0 5vw;
-    padding-top: 10vh;
+    padding-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: $desktop) {
+        padding-top: 5vh;
+    }
 }
 
 .wanted-img {
+    margin: 0 auto;
     height: 70vh;
-    margin-top: 2%;
+    margin-top: 5vh;
     display: block;
 
     @media (min-width: $desktop) {
         height: 85vh;
     }
+}
+
+.headers {
+    width: 80%;
+    height: auto;
+}
+
+.big {
+    width: 65%;
+    @media (min-width: $desktop) {
+        width: 50%;
+    }
+   
+    
 }

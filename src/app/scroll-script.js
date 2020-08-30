@@ -44,10 +44,12 @@ export class ChangeClassesOnScroll {
         }
 
         if (window.pageYOffset >= this.contact.offsetTop - navHeight) {
+            this.asidePicture.classList.add('contact');
             this.navContact.classList.add('nav-item-active');
             this.navPartnership.classList.remove('nav-item-active');
         } else {
             this.navContact.classList.remove('nav-item-active');
+            this.asidePicture.classList.remove('contact');
         }
     }
 }
