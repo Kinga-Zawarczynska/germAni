@@ -2,12 +2,15 @@
     width: 100%;
 }
 
-.message-sent__hidden {
+.message-sent__hidden, .error-message__hidden {
     visibility: hidden;
 }
 
-.message-sent__shown {
+.message-sent__shown, .error-message__shown {
     visibility: visible;
+    padding: 3%;
+    font-weight: bold;
+    font-size: 26px;
 }
 
 .form {
