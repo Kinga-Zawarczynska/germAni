@@ -43,11 +43,6 @@
                             .sendForm('gmail_germani', 'template_KPMggXkq', this)
                             .then(
                                 function (response) {
-                                    console.log(
-                                        'SUCCESS!',
-                                        response.status,
-                                        response.text
-                                    );
                                     document
                                         .getElementById('message-sent')
                                         .setAttribute('class', 'message-sent__shown');
@@ -61,7 +56,17 @@
                                     }, 4000);
                                 },
                                 function (error) {
-                                    console.log('FAILED...', error);
+                                    document
+                                        .getElementById('error-message')
+                                        .setAttribute('class', 'error-message__shown');
+                                    setTimeout(() => {
+                                        document
+                                            .getElementById('error-message')
+                                            .setAttribute(
+                                                'class',
+                                                'error-message__hidden'
+                                            );
+                                    }, 6000);
                                 }
                             )
                             .then(() => {
@@ -318,6 +323,9 @@
                     </form>
                     <div id="message-sent" class="message-sent__hidden">
                         <p>WIADOMOŚĆ WYSŁANA, DZIĘKUJEMY!</p>
+                    </div>
+                    <div id="error-message" class="error-message__hidden">
+                        <p>Wystąpił błąd :(  spróbuj ponownie później.</p>
                     </div>
                 </div>
             </article>
