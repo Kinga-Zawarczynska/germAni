@@ -58,7 +58,10 @@
                                 function (error) {
                                     document
                                         .getElementById('error-message')
-                                        .setAttribute('class', 'error-message__shown');
+                                        .setAttribute(
+                                            'class',
+                                            'error-message__shown'
+                                        );
                                     setTimeout(() => {
                                         document
                                             .getElementById('error-message')
@@ -91,6 +94,7 @@
                 <a class="nav-list__item nav-about" href="#about-me">O mnie</a>
                 <a class="nav-list__item nav-teaching" href="#teaching">Nauczanie</a>
                 <a class="nav-list__item nav-partnership" href="#partnership">Współpraca</a>
+                <a class="nav-list__item nav-offer" href="#offer">Oferta</a>
                 <a class="nav-list__item nav-contact" href="#contact">Kontakt</a>
             </div>
         </nav>
@@ -116,7 +120,7 @@
                     Co Ty na to, oswoimy go razem ?
                 </p>
                 <div class="content__single-article">
-                    <img src="images/germani-w-liczbach.png" alt="germani w liczbach" class="headers" >
+                    <img src="images/germani-w-liczbach.png" alt="germani w liczbach" class="headers" />
                     <img src="./images/10.png" class="icon-image" alt="10 lat doświadczenia" />
                     <p>
                         W tym czasie uczyłam w szkołach językowych, tworzyłam od
@@ -137,7 +141,7 @@
                         międzynarodowych koncernów.
                     </p>
                 </div>
-                <img src="images/zaufali-mi.png" alt="zaufali mi" class="headers big" > 
+                <img src="images/zaufali-mi.png" alt="zaufali mi" class="headers big" />
                 <div class="content__trusted-us"></div>
             </article>
 
@@ -191,7 +195,7 @@
                         gramatyczno-leksykalnych.
                     </p>
 
-                    <div class="flashcard">
+                    <!-- <div class="flashcard">
                         <div class="flashcard-inner">
                             <div class="flashcard-front">
                                 <img src="./images/share.png" class="flashcard-image" alt="cena" />
@@ -209,33 +213,67 @@
                         koleżanką z pracy, bratem, żoną, przyjacielem, mamą.
                         Gwarantujemy, że przyjemność z nauki i motywacja do niej
                         jeszcze bardziej wzrosną, a cena zmaleje o 50%!
-                    </p>
-                </div>
-                <div class="offer-list">
-                    <ul>
-                        <p>
-                            Bezpłatne 45-minutowe zajęcia próbne, na których omówimy
-                            Twoje potrzeby i plan działania
-                        </p>
-                        <p>
-                            Godziny zajęć dostosowane do Twoich potrzeb, umawiane
-                            indywidualnie z lektorem
-                        </p>
-                        <p>
-                            Dostęp do folderu z Twoim słowniczkiem, podręcznikiem i
-                            wieloma innymi materiałami, z których możesz korzystać na
-                            zajęciach i w domu
-                        </p>
-                        <p>Możliwość zajęć w parze za tę samą cenę</p>
-                        <p>Przede wszystkim przyjemna i efektywna nauka języka! ☺</p>
-                    </ul>
-
-                   <img src="images/price.svg" alt="cena" class="price">
+                    </p> -->
                 </div>
             </article>
 
+            <article id="offer">
+                <div class="content__single-article">
+                    <h1>Oferta</h1>
+                    <img src="./images/z-nami-zyskujesz.png" class="headers big" alt="z nami zyskujesz" />
+
+                    <div class="offer-list">
+                        <ul>
+                            <p>
+                                Bezpłatne 45-minutowe zajęcia próbne, na których omówimy
+                                Twoje potrzeby i plan działania
+                            </p>
+                            <p>
+                                Dostęp do folderu z Twoim słowniczkiem, podręcznikiem i
+                                wieloma innymi materiałami, z których możesz korzystać na
+                                zajęciach i w domu
+                            </p>
+                            <p>
+                                Przede wszystkim przyjemna i efektywna nauka języka bez wychodzenia z domu! ☺
+                            </p>
+                        </ul>
+
+                        <!-- <img src="images/price.svg" alt="cena" class="price" /> -->
+                    </div>
+
+                    <h1>W ramach naszej oferty mozesz wybrać:</h1>
+
+                    <div class="offer-list">
+                        <ul>
+                            <p>
+                                Zajęcia indywidualne - największa elastyczność i dopasowanie zagadnień omawianych na
+                                zajęciach tylko i wyłącznie do Twoich potrzeb!
+                            </p>
+
+                            <p>
+                                Zajęcia grupowe - kameralne 3-osobowe grupy oraz najniższa cena!
+                            </p>
+                            <p>
+                                A może zajęcia w parach? Wspólna nauka z koleżanką z pracy, bratem, żoną, przyjacielem,
+                                mamą to nie tylko przyjemność, ale też okazja żeby zaoszczędzić!
+                            </p>
+                        </ul>
+                    </div>
+
+                    <h1>Pliki do pobrania:</h1>
+
+                    <p>
+                        <a href="../src/Regulamin GermAni.pdf" target="_blank">Regulamin</a>
+                    </p>
+                    <p>
+                        <a href="../src/Formularz zgłoszeniowy GermAni.docx" target="_blank">Formularz zgłoszeniowy</a>
+                    </p>
+
+                </div>
+            </article>
             <article id="opinions">
-                <img src="images/oceniaja-nas.png" alt="tak oceniają nas ci, z którymi ju współpracujemy" class="headers" >
+                <img src="images/oceniaja-nas.png" alt="tak oceniają nas ci, z którymi ju współpracujemy"
+                    class="headers" />
 
                 <div class="slick-container">
                     <div class="slick-slide">
@@ -285,7 +323,7 @@
 
             <article id="partnership">
                 <div class="content__single-article">
-                    <img src="images/rekrutujemy.png" alt="rekrutujemy" class="headers big" >
+                    <img src="images/rekrutujemy.png" alt="rekrutujemy" class="headers big" />
                     <p>
                         Poszukujemy otwartych i pozytywnie nastawionych lektorów,
                         posiadających indywidualne podejście i dobry kontakt z
@@ -297,7 +335,7 @@
 
             <article id="contact">
                 <div class="content__single-article">
-                    <img src="images/zostanmy-w-kontakcie.png" alt="zostańmy w kontakcie" class="headers" >
+                    <img src="images/zostanmy-w-kontakcie.png" alt="zostańmy w kontakcie" class="headers" />
                     <form id="contact-form" class="form" name="contact-form">
                         <label>Twoje imię</label>
                         <input type="text" name="from_name" required class="form__input" autocomplete="off" />
@@ -325,7 +363,7 @@
                         <p>WIADOMOŚĆ WYSŁANA, DZIĘKUJEMY!</p>
                     </div>
                     <div id="error-message" class="error-message__hidden">
-                        <p>Wystąpił błąd :(  spróbuj ponownie później.</p>
+                        <p>Wystąpił błąd :( spróbuj ponownie później.</p>
                     </div>
                 </div>
             </article>
@@ -335,9 +373,7 @@
     <footer class="footer">
         <section class="footer-contact">
             <div class="info">
-                <h3>
-                    GermAni
-                </h3>
+                <h3>GermAni</h3>
                 <h3>Anna Kobylińska</h3>
             </div>
             <div class="footer-icons">
