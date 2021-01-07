@@ -136,9 +136,34 @@
 
 .big {
     width: 65%;
+
     @media (min-width: $desktop) {
         width: 50%;
     }
-   
-    
+}
+
+.download-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .btn {
+        font-weight: bold;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 15px;
+        border: 1px solid black;
+        background: rgba(243, 231, 177, 0.6);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .btn:hover {
+        background: rgba(243, 231, 177, 0.4);
+    }
+
+    .btn:active {
+        border: 1px solid gray;
+    }
 }
