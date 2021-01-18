@@ -195,26 +195,6 @@
                         wiedzę dzięki mnogości oferowanych przez nas ćwiczeń
                         gramatyczno-leksykalnych.
                     </p>
-
-                    <!-- <div class="flashcard">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <img src="./images/share.png" class="flashcard-image" alt="cena" />
-                            </div>
-                            <div class="flashcard-back">
-                                <img src="./images/cena.png" class="flashcard-image" alt="cena" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>
-                        A może zastanawiasz się, co jeszcze bardziej mogłoby Ci
-                        uprzyjemnić naukę niemieckiego? Naszym zdaniem jest to
-                        dzielenie jej z kimś bliskim. Zapisz się na zajęcia z
-                        koleżanką z pracy, bratem, żoną, przyjacielem, mamą.
-                        Gwarantujemy, że przyjemność z nauki i motywacja do niej
-                        jeszcze bardziej wzrosną, a cena zmaleje o 50%!
-                    </p> -->
                 </div>
             </article>
 
@@ -225,53 +205,53 @@
                     <div class="offer-list">
                         <ul>
                             <p>
-                                Bezpłatne 45-minutowe zajęcia próbne, na których omówimy
-                                Twoje potrzeby i plan działania
+                                Bezpłatne 45-minutowe zajęcia próbne, na których
+                                omówimy Twoje potrzeby i plan działania
                             </p>
                             <p>
-                                Dostęp do folderu z Twoim słowniczkiem, podręcznikiem i
-                                wieloma innymi materiałami, z których możesz korzystać na
-                                zajęciach i w domu
+                                Dostęp do folderu z Twoim słowniczkiem, podręcznikiem
+                                i wieloma innymi materiałami, z których możesz
+                                korzystać na zajęciach i w domu
                             </p>
                             <p>
-                                Przede wszystkim przyjemna i efektywna nauka języka bez wychodzenia z domu! ☺
+                                Przede wszystkim przyjemna i efektywna nauka języka
+                                bez wychodzenia z domu! ☺
                             </p>
                         </ul>
-
-                        <!-- <img src="images/price.svg" alt="cena" class="price" /> -->
                     </div>
 
-                    <h1>W ramach naszej oferty mozesz wybrać:</h1>
+                    <h3 class='offer-subtitle'>W ramach naszej oferty mozesz wybrać:</h3>
 
                     <div class="offer-list">
                         <ul>
                             <p>
-                                Zajęcia indywidualne - największa elastyczność i dopasowanie zagadnień omawianych na
-                                zajęciach tylko i wyłącznie do Twoich potrzeb!
+                                Zajęcia indywidualne - największa elastyczność i
+                                dopasowanie zagadnień omawianych na zajęciach tylko i
+                                wyłącznie do Twoich potrzeb!
                             </p>
 
                             <p>
-                                Zajęcia grupowe - kameralne 3-osobowe grupy oraz najniższa cena!
+                                Zajęcia grupowe - kameralne 3-osobowe grupy oraz
+                                najniższa cena!
                             </p>
                             <p>
-                                A może zajęcia w parach? Wspólna nauka z koleżanką z pracy, bratem, żoną, przyjacielem,
-                                mamą to nie tylko przyjemność, ale też okazja żeby zaoszczędzić!
+                                A może zajęcia w parach? Wspólna nauka z koleżanką z
+                                pracy, bratem, żoną, przyjacielem, mamą to nie tylko
+                                przyjemność, ale też okazja żeby zaoszczędzić!
                             </p>
                         </ul>
                     </div>
 
-                    <h1>Cennik:</h1>
                     <img src="images/cennik.png" alt="germani w liczbach" class="headers" />
 
-                    <h1>Pliki do pobrania:</h1>
+                    <h3 class='offer-subtitle'>Pliki do pobrania:</h3>
 
-                    <div class='download-buttons'>
+                    <div class="download-buttons">
                         <a class="btn" href="./Regulamin GermAni.pdf" target="_blank">Regulamin</a>
                         <a class="btn" href="./Formularz zgłoszeniowy GermAni.docx" target="_blank">
                             Formularz zgłoszeniowy
                         </a>
                     </div>
-
                 </div>
             </article>
             <article id="opinions">
@@ -340,25 +320,25 @@
                 <div class="content__single-article">
                     <img src="images/zostanmy-w-kontakcie.png" alt="zostańmy w kontakcie" class="headers" />
                     <form id="contact-form" class="form" name="contact-form">
-                        <label>Twoje imię</label>
+                        <label class="contact-label">Imię:</label>
                         <input type="text" name="from_name" required class="form__input" autocomplete="off" />
-                        <label>Twój e-mail</label>
+                        <label class="contact-label">E-mail:</label>
                         <input type="email" name="from_email" required class="form__input" autocomplete="off" />
-                        <div class="form__checkbox">
-                            <label class="form__checkbox-label">Chcę pracować w <strong>GermAni -></strong>
-                            </label>
-                            <input type="checkbox" name="checkbox" />
-                        </div>
-
                         <input type="hidden" name="emailSubject" />
-                        <label>Treść</label>
+                        <label class="contact-label">Wiadomość:</label>
                         <textarea name="message" class="form__input"></textarea>
+                        <label class="contact-label">Potwierdzenie:</label>
                         <div class="form__captcha">
                             <p class="first-number" id="first-number"></p>
                             +
                             <p class="second-number" id="second-number"></p>
                             =
                             <input type="text" name="sum" required id="captcha" class="form__input--captcha" />
+                        </div>
+                        <div class="form__checkbox">
+                            <label class="form__checkbox-label">Chcę pracować w <strong>GermAni</strong>
+                            </label>
+                            <input type="checkbox" name="checkbox" />
                         </div>
                         <input type="submit" value="Wyślij" id="submit" class="form__submit" disabled />
                     </form>
@@ -394,7 +374,9 @@
                 <p>+48 534 392 377</p>
             </div>
         </section>
-        &copy; Lemme-Do
+        <a href="https://wojtekszczawinski.site/" target="blank">
+            &copy; Lemme-Do
+        </a>
     </footer>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
