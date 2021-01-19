@@ -23,15 +23,11 @@
 
     .contact-label {
         text-align: left;
-        width: 65%;
-
-        @media (min-width: $desktop) {
-            width: 50%;
-        }
+        width: 70%;
     }
 
     &__input {
-        width: 65%;
+        width: 80%;
         height: 30px;
         outline: none;
         border: none;
@@ -40,10 +36,6 @@
         background: rgba(247, 246, 185, 0.7);
         padding: 2.5%;
 
-        @media (min-width: $desktop) {
-            width: 50%;
-        }
-
         &--captcha {
             width: 20%;
         }
@@ -51,6 +43,10 @@
 
     &__input:focus {
         border-bottom: 2px solid black;
+    }
+
+    &__input:nth-child(7) {
+        min-height: 50px;
     }
 
     &__captcha {
@@ -65,13 +61,9 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-        width: 65%;
+        width: 70%;
         padding-top: 10px;
         padding-bottom: 10px;
-
-        @media (min-width: $desktop) {
-            width: 50%;
-        }
 
         &-label {
             font-size: 16px;
