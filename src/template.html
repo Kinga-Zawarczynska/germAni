@@ -58,7 +58,10 @@
                                 function (error) {
                                     document
                                         .getElementById('error-message')
-                                        .setAttribute('class', 'error-message__shown');
+                                        .setAttribute(
+                                            'class',
+                                            'error-message__shown'
+                                        );
                                     setTimeout(() => {
                                         document
                                             .getElementById('error-message')
@@ -89,7 +92,7 @@
             </a>
             <div class="nav-list">
                 <a class="nav-list__item nav-about" href="#about-me">O mnie</a>
-                <a class="nav-list__item nav-teaching" href="#teaching">Nauczanie</a>
+                <a class="nav-list__item nav-teaching" href="#teaching">Oferta</a>
                 <a class="nav-list__item nav-partnership" href="#partnership">Współpraca</a>
                 <a class="nav-list__item nav-contact" href="#contact">Kontakt</a>
             </div>
@@ -116,7 +119,7 @@
                     Co Ty na to, oswoimy go razem ?
                 </p>
                 <div class="content__single-article">
-                    <img src="images/germani-w-liczbach.png" alt="germani w liczbach" class="headers" >
+                    <img src="images/germani-w-liczbach.png" alt="germani w liczbach" class="headers" />
                     <img src="./images/10.png" class="icon-image" alt="10 lat doświadczenia" />
                     <p>
                         W tym czasie uczyłam w szkołach językowych, tworzyłam od
@@ -137,7 +140,7 @@
                         międzynarodowych koncernów.
                     </p>
                 </div>
-                <img src="images/zaufali-mi.png" alt="zaufali mi" class="headers big" > 
+                <img src="images/zaufali-mi.png" alt="zaufali mi" class="headers big" />
                 <div class="content__trusted-us"></div>
             </article>
 
@@ -190,52 +193,70 @@
                         wiedzę dzięki mnogości oferowanych przez nas ćwiczeń
                         gramatyczno-leksykalnych.
                     </p>
-
-                    <div class="flashcard">
-                        <div class="flashcard-inner">
-                            <div class="flashcard-front">
-                                <img src="./images/share.png" class="flashcard-image" alt="cena" />
-                            </div>
-                            <div class="flashcard-back">
-                                <img src="./images/cena.png" class="flashcard-image" alt="cena" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>
-                        A może zastanawiasz się, co jeszcze bardziej mogłoby Ci
-                        uprzyjemnić naukę niemieckiego? Naszym zdaniem jest to
-                        dzielenie jej z kimś bliskim. Zapisz się na zajęcia z
-                        koleżanką z pracy, bratem, żoną, przyjacielem, mamą.
-                        Gwarantujemy, że przyjemność z nauki i motywacja do niej
-                        jeszcze bardziej wzrosną, a cena zmaleje o 50%!
-                    </p>
-                </div>
-                <div class="offer-list">
-                    <ul>
-                        <p>
-                            Bezpłatne 45-minutowe zajęcia próbne, na których omówimy
-                            Twoje potrzeby i plan działania
-                        </p>
-                        <p>
-                            Godziny zajęć dostosowane do Twoich potrzeb, umawiane
-                            indywidualnie z lektorem
-                        </p>
-                        <p>
-                            Dostęp do folderu z Twoim słowniczkiem, podręcznikiem i
-                            wieloma innymi materiałami, z których możesz korzystać na
-                            zajęciach i w domu
-                        </p>
-                        <p>Możliwość zajęć w parze za tę samą cenę</p>
-                        <p>Przede wszystkim przyjemna i efektywna nauka języka! ☺</p>
-                    </ul>
-
-                   <img src="images/price.svg" alt="cena" class="price">
                 </div>
             </article>
 
+            <article id="offer">
+                <div class="content__single-article">
+                    <img src="./images/oferta.png" class="headers big" alt="oferta" />
+
+                    <div class="offer-list">
+                        <ul>
+                            <p>
+                                Bezpłatne 45-minutowe zajęcia próbne, na których
+                                omówimy Twoje potrzeby i plan działania
+                            </p>
+                            <p>
+                                Dostęp do folderu z Twoim słowniczkiem, podręcznikiem
+                                i wieloma innymi materiałami, z których możesz
+                                korzystać na zajęciach i w domu
+                            </p>
+                            <p>
+                                Przede wszystkim przyjemna i efektywna nauka języka
+                                bez wychodzenia z domu! ☺
+                            </p>
+                        </ul>
+                    </div>
+
+                    <h3 class="offer-subtitle">
+                        W ramach naszej oferty mozesz wybrać:
+                    </h3>
+
+                    <div class="offer-list">
+                        <ul>
+                            <p>
+                                Zajęcia indywidualne - największa elastyczność i
+                                dopasowanie zagadnień omawianych na zajęciach tylko i
+                                wyłącznie do Twoich potrzeb!
+                            </p>
+
+                            <p>
+                                Zajęcia grupowe - kameralne 3-osobowe grupy oraz
+                                najniższa cena!
+                            </p>
+                            <p>
+                                A może zajęcia w parach? Wspólna nauka z koleżanką z
+                                pracy, bratem, żoną, przyjacielem, mamą to nie tylko
+                                przyjemność, ale też okazja żeby zaoszczędzić!
+                            </p>
+                        </ul>
+                    </div>
+
+                    <img src="images/cennik.png" alt="germani w liczbach" class="headers" />
+
+                    <h3 class="offer-subtitle">Pliki do pobrania:</h3>
+
+                    <div class="download-buttons">
+                        <a class="btn" href="./Regulamin GermAni.pdf" target="_blank">Regulamin</a>
+                        <a class="btn" href="./Formularz zgłoszeniowy GermAni.docx" target="_blank">
+                            Formularz zgłoszeniowy
+                        </a>
+                    </div>
+                </div>
+            </article>
             <article id="opinions">
-                <img src="images/oceniaja-nas.png" alt="tak oceniają nas ci, z którymi ju współpracujemy" class="headers" >
+                <img src="images/oceniaja-nas.png" alt="tak oceniają nas ci, z którymi ju współpracujemy"
+                    class="headers" />
 
                 <div class="slick-container">
                     <div class="slick-slide">
@@ -285,7 +306,7 @@
 
             <article id="partnership">
                 <div class="content__single-article">
-                    <img src="images/rekrutujemy.png" alt="rekrutujemy" class="headers big" >
+                    <img src="images/rekrutujemy.png" alt="rekrutujemy" class="headers big" />
                     <p>
                         Poszukujemy otwartych i pozytywnie nastawionych lektorów,
                         posiadających indywidualne podejście i dobry kontakt z
@@ -297,21 +318,16 @@
 
             <article id="contact">
                 <div class="content__single-article">
-                    <img src="images/zostanmy-w-kontakcie.png" alt="zostańmy w kontakcie" class="headers" >
+                    <img src="images/zostanmy-w-kontakcie.png" alt="zostańmy w kontakcie" class="headers" />
                     <form id="contact-form" class="form" name="contact-form">
-                        <label>Twoje imię</label>
+                        <label class="contact-label">Imię:</label>
                         <input type="text" name="from_name" required class="form__input" autocomplete="off" />
-                        <label>Twój e-mail</label>
+                        <label class="contact-label">E-mail:</label>
                         <input type="email" name="from_email" required class="form__input" autocomplete="off" />
-                        <div class="form__checkbox">
-                            <label class="form__checkbox-label">Chcę pracować w <strong>GermAni -></strong>
-                            </label>
-                            <input type="checkbox" name="checkbox" />
-                        </div>
-
                         <input type="hidden" name="emailSubject" />
-                        <label>Treść</label>
+                        <label class="contact-label">Wiadomość:</label>
                         <textarea name="message" class="form__input"></textarea>
+                        <label class="contact-label">Potwierdzenie:</label>
                         <div class="form__captcha">
                             <p class="first-number" id="first-number"></p>
                             +
@@ -319,13 +335,18 @@
                             =
                             <input type="text" name="sum" required id="captcha" class="form__input--captcha" />
                         </div>
+                        <div class="form__checkbox">
+                            <label class="form__checkbox-label">Chcę pracować w <strong>GermAni</strong>
+                            </label>
+                            <input type="checkbox" name="checkbox" />
+                        </div>
                         <input type="submit" value="Wyślij" id="submit" class="form__submit" disabled />
                     </form>
                     <div id="message-sent" class="message-sent__hidden">
                         <p>WIADOMOŚĆ WYSŁANA, DZIĘKUJEMY!</p>
                     </div>
                     <div id="error-message" class="error-message__hidden">
-                        <p>Wystąpił błąd :(  spróbuj ponownie później.</p>
+                        <p>Wystąpił błąd :( spróbuj ponownie później.</p>
                     </div>
                 </div>
             </article>
@@ -335,9 +356,7 @@
     <footer class="footer">
         <section class="footer-contact">
             <div class="info">
-                <h3>
-                    GermAni
-                </h3>
+                <h3>GermAni</h3>
                 <h3>Anna Kobylińska</h3>
             </div>
             <div class="footer-icons">
@@ -355,7 +374,7 @@
                 <p>+48 534 392 377</p>
             </div>
         </section>
-        &copy; Lemme-Do
+        <a href="https://wojtekszczawinski.site/" target="blank"> &copy; Lemme-Do </a>
     </footer>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
