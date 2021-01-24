@@ -1,12 +1,21 @@
 export class Dropdown {
     constructor() {
-        this.navbar = document.querySelector('#nav');
+        this.trigger = document.querySelector('.nav-teaching');
         this.dropdown = document.querySelector('.dropdown');
 
         this.handleDropdown;
     }
 
     handleDropdown() {
-        console.log('banana');
+        this.trigger.addEventListener('mouseenter', handleEnter);
+        this.trigger.addEventListener('mouseleave', handleLeave);
+
+        function handleEnter() {
+            console.log('enter');
+        }
+
+        function handleLeave() {
+            console.log('leave');
+        }
     }
 }
