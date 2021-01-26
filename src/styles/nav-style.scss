@@ -41,9 +41,32 @@ nav {
     &__item {
         padding: 2vw;
         transition: all 0.3s ease-in-out;
+        position: relative;
 
         &:hover {
             font-weight: bold;
+            .dropdown {
+                z-index: 20;
+                overflow-y: overlay;
+                height: 60px;
+                li {
+                    display: block;
+                    background-color: blue;
+                    
+                }
+            }
+            
+        }
+
+        .dropdown {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            li {
+                display: none;
+                position: relative;
+            }
         }
     }
 }
