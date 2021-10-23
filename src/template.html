@@ -104,14 +104,14 @@
     <header>
         <article id="hero"></article>
         <nav id="nav" class="nav">
-            <a class="nav-logo" href="#hero">
+            <a class="nav-logo scroll_to" href="#hero">
                 <img class="nav-logo__img" src="./images/germaniLogo.png" alt="germAni-logo" />
             </a>
             <div class="nav-list">
-                <a class="nav-list__item nav-about" href="#omnie">O mnie</a>
-                <a class="nav-list__item nav-teaching" href="#oferta">Oferta</a>
-                <a class="nav-list__item nav-partnership" href="#wspolpraca">Współpraca</a>
-                <a class="nav-list__item nav-contact" href="#kontakt">Kontakt</a>
+                <a class="nav-list__item nav-about scroll_to" href="#omnie">O mnie</a>
+                <a class="nav-list__item nav-teaching scroll_to" href="#oferta">Oferta</a>
+                <a class="nav-list__item nav-partnership scroll_to" href="#wspolpraca">Współpraca</a>
+                <a class="nav-list__item nav-contact scroll_to" href="#kontakt">Kontakt</a>
             </div>
         </nav>
     </header>
@@ -440,6 +440,19 @@
     checkNumber.addEventListener('keyup', function () {
         validateForm();
     });
+
+
+    jQuery('.scroll_to').click(function (e) {
+    var jump = $(this).attr('href');
+    var new_position = $(jump).offset();
+    $('html, body').animate(
+        {
+            scrollTop: new_position.top,
+        },
+        1000
+    );
+    e.preventDefault();
+});
 </script>
 
 </html>

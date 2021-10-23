@@ -17,7 +17,7 @@ export class ChangeClassesOnScroll {
     }
 
     handleChangeClasses() {
-        let navHeight = this.nav.offsetHeight;
+        let navHeight = this.nav.offsetHeight + 50;
 
         if (window.pageYOffset >= this.aboutMe.offsetTop - navHeight) {
             this.navAbout.classList.add('nav-item-active');

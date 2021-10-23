@@ -12,13 +12,12 @@
         .flashcard-inner {
             transform: rotateY(180deg);
         }
-    
+
         .flashcard-front {
             opacity: 0;
         }
     }
 }
-
 
 .flashcard-inner {
     position: relative;
@@ -55,5 +54,15 @@
 
     p {
         font-weight: 700;
+    }
+}
+
+.flashcard-back {
+    opacity: 0;
+}
+
+@media (min-width: $desktop) {
+    .flashcard-back {
+        opacity: 1;
     }
 }
