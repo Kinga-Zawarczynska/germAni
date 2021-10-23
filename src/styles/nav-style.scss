@@ -20,9 +20,6 @@ nav {
     background: url('../videos/arrows.gif') no-repeat;
     justify-content: center;
     width: 20rem;
-    @media (min-width: $desktop) {
-        margin-left: 2rem;
-    }
 
     &__img {
         margin: 1vh 0;
@@ -39,7 +36,7 @@ nav {
     height: 10vh;
 
     &__item {
-        padding: 2vw;
+        padding: 1vw;
         transition: all 0.3s ease-in-out;
 
         &:hover {

@@ -108,10 +108,10 @@
                 <img class="nav-logo__img" src="./images/germaniLogo.png" alt="germAni-logo" />
             </a>
             <div class="nav-list">
-                <a class="nav-list__item nav-about" href="#about-me">O mnie</a>
-                <a class="nav-list__item nav-teaching" href="#teaching">Oferta</a>
-                <a class="nav-list__item nav-partnership" href="#partnership">Współpraca</a>
-                <a class="nav-list__item nav-contact" href="#contact">Kontakt</a>
+                <a class="nav-list__item nav-about" href="#omnie">O mnie</a>
+                <a class="nav-list__item nav-teaching" href="#oferta">Oferta</a>
+                <a class="nav-list__item nav-partnership" href="#wspolpraca">Współpraca</a>
+                <a class="nav-list__item nav-contact" href="#kontakt">Kontakt</a>
             </div>
         </nav>
     </header>
@@ -119,7 +119,7 @@
     <main class="content">
         <aside class="content-aside-pic"></aside>
 
-        <section class="content__articles">
+        <section class="content__articles" id="omnie">
             <article id="about-me">
                 <img class="meet-me" src="./images/poznajmysie.png" alt="poznajmy się" />
                 <p class="content__single-article">
@@ -161,7 +161,7 @@
                 <div class="content__trusted-us"></div>
             </article>
 
-            <hr>
+            <img id="oferta" src="images/hr-cat.png" alt="hr" class="hr-cat" />
 
             <article id="teaching">
                 <div class="content__single-article">
@@ -263,6 +263,15 @@
 
                     <img src="images/cennik.png" alt="germani w liczbach" class="headers" />
 
+                    <h3 class="offer-subtitle">Pliki do pobrania:</h3>
+
+                    <div class="download-buttons">
+                        <a class="btn" href="./Regulamin GermAni.pdf" target="_blank">Regulamin</a>
+                        <a class="btn" href="./Formularz zgłoszeniowy GermAni.docx" target="_blank">
+                            Formularz zgłoszeniowy
+                        </a>
+                    </div>
+
                 </div>
             </article>
             <article id="opinions">
@@ -315,7 +324,7 @@
                 </div>
             </article>
 
-            <hr>
+            <img src="images/hr-cat.png" alt="hr" class="hr-cat" id="wspolpraca" />
 
             <article id="partnership">
                 <div class="content__single-article">
@@ -329,7 +338,7 @@
                 </div>
             </article>
 
-            <hr>
+            <img src="images/hr-cat.png" alt="hr" class="hr-cat" id="kontakt" />
 
             <article id="contact">
                 <div class="content__single-article">
@@ -362,14 +371,6 @@
                     </div>
                     <div id="error-message" class="error-message__hidden">
                         <p>Wystąpił błąd :( spróbuj ponownie później.</p>
-                    </div>
-                    <h3 class="offer-subtitle">Pliki do pobrania:</h3>
-
-                    <div class="download-buttons">
-                        <a class="btn" href="./Regulamin GermAni.pdf" target="_blank">Regulamin</a>
-                        <a class="btn" href="./Formularz zgłoszeniowy GermAni.docx" target="_blank">
-                            Formularz zgłoszeniowy
-                        </a>
                     </div>
                 </div>
         </section>
