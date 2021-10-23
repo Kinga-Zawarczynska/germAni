@@ -7,15 +7,18 @@
     justify-self: center;
 }
 
-.flashcard:hover {
-    .flashcard-inner {
-        transform: rotateY(180deg);
-    }
-
-    .flashcard-front {
-        opacity: 0;
+@media (min-width: $desktop) {
+    .flashcard:hover {
+        .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+    
+        .flashcard-front {
+            opacity: 0;
+        }
     }
 }
+
 
 .flashcard-inner {
     position: relative;
