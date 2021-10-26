@@ -10,7 +10,7 @@ module.exports = merge(common, {
     mode: 'production',
     output: {
         filename: 'bundle.[contentHash].js',
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'build'),
     },
     optimization: {
         minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
@@ -23,11 +23,7 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
-                use: [
-                    MiniCssExtractPlugin.loader, 
-                    'css-loader', 
-                    'sass-loader'
-                ],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
         ],
     },
