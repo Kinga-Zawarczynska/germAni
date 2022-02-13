@@ -6,12 +6,14 @@ export class ChangeClassesOnScroll {
         this.teaching = document.querySelector('#teaching');
         this.partnership = document.querySelector('#partnership');
         this.contact = document.querySelector('#contact');
+        this.files = document.querySelector('#files');
 
         this.nav = document.querySelector('#nav');
         this.navAbout = document.querySelector('.nav-about');
         this.navTeaching = document.querySelector('.nav-teaching');
         this.navPartnership = document.querySelector('.nav-partnership');
         this.navContact = document.querySelector('.nav-contact');
+        this.navFiles = document.querySelector('.nav-files');
 
         this.handleChangeClasses;
     }
@@ -34,10 +36,17 @@ export class ChangeClassesOnScroll {
             this.navTeaching.classList.remove('nav-item-active');
         }
 
+        if (window.pageYOffset >= this.files.offsetTop - navHeight) {
+            this.navFiles.classList.add('nav-item-active');
+            this.navTeaching.classList.remove('nav-item-active');
+        } else {
+            this.navFiles.classList.remove('nav-item-active');
+        }
+
         if (window.pageYOffset >= this.partnership.offsetTop - navHeight) {
             this.asidePicture.classList.add('partnership');
             this.navPartnership.classList.add('nav-item-active');
-            this.navTeaching.classList.remove('nav-item-active');
+            this.navFiles.classList.remove('nav-item-active');
         } else {
             this.asidePicture.classList.remove('partnership');
             this.navPartnership.classList.remove('nav-item-active');
@@ -49,7 +58,6 @@ export class ChangeClassesOnScroll {
             this.navPartnership.classList.remove('nav-item-active');
         } else {
             this.navContact.classList.remove('nav-item-active');
-            this.asidePicture.classList.remove('contact');
         }
     }
 }

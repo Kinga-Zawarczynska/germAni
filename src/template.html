@@ -82,21 +82,35 @@
         };
     </script>
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) :
+                    n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+        );
         fbq('init', '470642527523788');
         fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=470642527523788&ev=PageView&noscript=1"
-        />
+        <img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id=470642527523788&ev=PageView&noscript=1" />
     </noscript>
 </head>
 
@@ -110,6 +124,7 @@
             <div class="nav-list">
                 <a class="nav-list__item nav-about scroll_to" href="#omnie">O mnie</a>
                 <a class="nav-list__item nav-teaching scroll_to" href="#oferta">Oferta</a>
+                <a class="nav-list__item nav-files scroll_to" href="#pliki">Pliki</a>
                 <a class="nav-list__item nav-partnership scroll_to" href="#wspolpraca">Współpraca</a>
                 <a class="nav-list__item nav-contact scroll_to" href="#kontakt">Kontakt</a>
             </div>
@@ -261,17 +276,12 @@
                         </ul>
                     </div>
 
-                    <img src="images/cennik.png" alt="germani w liczbach" class="headers" />
-
-                    <h3 class="offer-subtitle">Pliki do pobrania:</h3>
-
-                    <div class="download-buttons">
-                        <a class="btn" href="./Regulamin GermAni.pdf" target="_blank">Regulamin</a>
-                        <a class="btn" href="./Formularz zgłoszeniowy GermAni.docx" target="_blank">
-                            Formularz zgłoszeniowy
+                    <div class="download-buttons cost">
+                        <a class="btn" href="https://www.facebook.com/germanikursy/about/?ref=page_internal"
+                            target="_blank">
+                            <img src="images/cennik2.png" alt="germani w liczbach" class="headers" />
                         </a>
                     </div>
-
                 </div>
             </article>
             <article id="opinions">
@@ -320,6 +330,21 @@
                             się i zacząć mówić po niemiecku. Poza tym nauka jest
                             możliwa nawet w czasie koronawirusa.
                         </p>
+                    </div>
+                </div>
+            </article>
+
+            <img src="images/hr-cat.png" alt="hr" class="hr-cat" id="pliki" />
+
+            <article id="files">
+                <div class="content__single-article">
+                    <img src="images/plikidopobrania.png" alt="pliki do pobrania" class="headers big" />
+
+                    <div class="download-buttons">
+                        <a class="btn" href="./Regulamin GermAni.pdf" target="_blank">Regulamin</a>
+                        <a class="btn" href="./Formularz zgłoszeniowy GermAni.docx" target="_blank">
+                            Formularz zgłoszeniowy
+                        </a>
                     </div>
                 </div>
             </article>
@@ -373,6 +398,7 @@
                         <p>Wystąpił błąd :( spróbuj ponownie później.</p>
                     </div>
                 </div>
+            </article>
         </section>
     </main>
 
@@ -397,7 +423,7 @@
                 <p>+48 534 392 377</p>
             </div>
         </section>
-        <a href="https://wojtekszczawinski.site/" target="blank"> &copy; Lemme-Do </a>
+        &copy; Lemme-Do
     </footer>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -441,18 +467,16 @@
         validateForm();
     });
 
-
     jQuery('.scroll_to').click(function (e) {
-    var jump = $(this).attr('href');
-    var new_position = $(jump).offset();
-    $('html, body').animate(
-        {
-            scrollTop: new_position.top,
-        },
-        1000
-    );
-    e.preventDefault();
-});
+        var jump = $(this).attr('href');
+        var new_position = $(jump).offset();
+        $('html, body').animate({
+                scrollTop: new_position.top,
+            },
+            1000
+        );
+        e.preventDefault();
+    });
 </script>
 
 </html>

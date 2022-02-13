@@ -153,7 +153,7 @@
 }
 
 #opinions {
-    padding-top: 5vh;
+    padding-top: 0;
 }
 
 .wanted-img {
@@ -212,4 +212,8 @@
             font-size: 16px;
         }
     }
+}
+
+.cost {
+    padding-top: 5vh;
 }
