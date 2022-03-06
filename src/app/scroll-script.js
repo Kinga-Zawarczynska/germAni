@@ -57,6 +57,7 @@ export class ChangeClassesOnScroll {
             this.navContact.classList.add('nav-item-active');
             this.navPartnership.classList.remove('nav-item-active');
         } else {
+            this.asidePicture.classList.remove('contact');
             this.navContact.classList.remove('nav-item-active');
         }
     }
